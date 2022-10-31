@@ -1,0 +1,26 @@
+.desc {
+    margin-top: 8vw;
+    padding: 3vw;
+    background-color: rgb(253, 224, 224);
+  }
+  .descr {
+    float: right;
+    width: 60%;
+    margin-right: 5vw;
+    /* margin-bottom: 100px; */
+    /* padding: 5vw;
+    text-align: center;
+    background-color: rgb(253, 224, 224); */
+  }
+  /* .desc > p {
+    text-align: center;
+  } */
+  .im {
+    height: 35vh;
+    width: 25vw;
+    margin-bottom: "100px";
+  }
+
+  .ee{
+    text-align: center;
+  }

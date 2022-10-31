@@ -1,0 +1,17 @@
+.nopage {
+  background-color: rgba(252, 177, 177, 0.747);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px #888888;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: large;
+}

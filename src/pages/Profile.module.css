@@ -1,0 +1,52 @@
+.body {
+    padding-top: 13vh;
+    height: 1000px;
+    background-color: rgb(253, 224, 224);
+}
+
+/* .navbar {
+    background-color: rgb(253, 224, 224);
+} */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* .nav-logo {
+    height: 4vw;
+} */
+
+/* .quote {
+    margin-left: 38vw;
+    color: black;
+} */
+
+/* .btn {
+    border-radius: 2vw;
+} */
+
+.pfp {
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+}
+
+.user {
+    background-color: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 5vw;
+ 
+}
+
+.img1{
+    width: 100px;
+}
+
+.img1:hover {
+    transition: 0.5s;
+    transform: translate(0px, -5px);
+}

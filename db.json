@@ -1,0 +1,24 @@
+{
+  "users" :[
+    {
+      "id":1,
+      "username": "rush0910",
+      "name": "rushendra",
+      "email": "rushendra910@gmail.com",
+      "age": 18,
+      "gender": "Female",
+      "password": "blahblah",
+      "profilePicture": "1650996155887",
+      "bio": "catssss",
+      "posts": [
+        {
+          "id": 1,
+          "category": "Books",
+          "title": "title",
+          "image": "",
+          "content": "",
+          "author": "loggedUser"
+        }]
+    }
+  ]
+}

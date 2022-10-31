@@ -1,0 +1,10 @@
+.navlink {
+    font-size: 1.4rem;
+    margin: 10px;
+    padding:8;
+  }
+
+  .navitem {
+    margin-left: 20px;
+    font-size: 20px;
+  }
