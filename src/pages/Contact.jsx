@@ -97,22 +97,17 @@ const Contact = ({ loggedUser }) => {
             </form>
           </div>
         </div>
-        {/* <ul> */}
-        {console.log(temp)}
         {show && <h3>Recent Comments</h3>}
         <div style={{display:"flex"}}>
           {temp.map((data) => {
-            // <li>{`Name: ${data.name}, Email: ${data.email}, Message: ${data.message}`}</li>
-            return( <div className={`${classes.newdiv}`}>
-              <p className="fw-bold">NAME : {data.name}</p>
-              <p>EMAIL : {data.email}</p>
-              <p>NUMBER : {data.pnum}</p>
-              <p>MESSAGE : {data.message}</p>
+            return(<div className={`${classes.newdiv}`}>
+              <p><b>Name:</b> {data.name}</p>
+              <p><b>Email:</b> {data.email}</p>
+              <p><b>Number:</b> {data.pnum}</p>
+              <p><b>Message:</b> {data.message}</p>
             </div>)
-
           })}
           </div>
-        {/* </ul> */}
       </div>
     </div>
   );

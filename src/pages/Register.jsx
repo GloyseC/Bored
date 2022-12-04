@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Register.module.css";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Register(props) {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ function Register(props) {
         >
           <div className="col-lg-8 col-xl-6">
             <div className="card rounded-3">
-              <a href="/">
+              <Link to="/">
                 <img
                   src={logo}
                   className="w-100"
@@ -45,7 +46,7 @@ function Register(props) {
                   }}
                   alt="logo"
                 />
-              </a>
+              </Link>
 
               <hr style={{ width: "90%", margin: "auto", marginTop: "20px" }} />
               <div className="card-body p-4 p-md-5">

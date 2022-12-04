@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import classes from "./Navbar.module.css";
+import { store } from "../redux-store/store";
 
 const Navbar = ({loggedUser}) => {
-  let pic = loggedUser.profilePicture
+  let pic = store.getState().profilePicture
 
   // console.log(pic)
   // let pat = "../assets/" + String(pic)
@@ -45,11 +46,11 @@ const Navbar = ({loggedUser}) => {
               <li><a className="dropdown-item" href="login">Login</a></li>
               <li><a className="dropdown-item" href="post">Create a post</a></li> */}
 
-              <li><Link className="dropdown-item" to="/profile" state={loggedUser}>Profile</Link></li>
-              <li><Link className="dropdown-item" to="/edit" state={loggedUser}>Edit profile</Link></li>
-              {!loggedUser && <li><Link className="dropdown-item" to="/register" state={loggedUser}>Sign up</Link></li>}
-              {!loggedUser && <li><Link className="dropdown-item" to="/login" state={loggedUser}>Login</Link></li>}
-              <li><Link className="dropdown-item" to="/post" state={loggedUser}>Create a post</Link></li>
+              <li><Link className="dropdown-item" to="/profile" state={store.getState()}>Profile</Link></li>
+              <li><Link className="dropdown-item" to="/edit" state={store.getState()}>Edit profile</Link></li>
+              {!store.getState() && <li><Link className="dropdown-item" to="/register" state={store.getState()}>Sign up</Link></li>}
+              {!store.getState() && <li><Link className="dropdown-item" to="/login" state={store.getState()}>Login</Link></li>}
+              <li><Link className="dropdown-item" to="/post" state={store.getState()}>Create a post</Link></li>
             </ul>
           </li>
         </ul>

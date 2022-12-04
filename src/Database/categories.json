@@ -1,0 +1,27 @@
+[
+    {
+      "id": "1",
+      "name": "Books",
+      "img": "book.png"
+    },
+    {
+      "id": "2",
+      "name": "Movies",
+      "img": "movie.png"
+    },
+    {
+      "id": "3",
+      "name": "Memes",
+      "img": "meme.png"
+    },
+    {
+      "id": "4",
+      "name": "Recipes",
+      "img": "recipe.png"
+    },
+    {
+      "id": "5",
+      "name": "Sports",
+      "img": "sport.png"
+    }
+]

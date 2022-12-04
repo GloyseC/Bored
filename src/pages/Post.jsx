@@ -1,18 +1,41 @@
 import React, { useState } from "react";
 import classes from "./Post.module.css";
 import Navbar from "../components/Navbar";
+import { Prev } from "react-bootstrap/esm/PageItem";
 
-function Post({loggedUser, onSavePostData}) {
+function Post({loggedUser, onSavePostData, catList, setCatList}) {
     const [formData, setFormData] = useState({
         category: "",
         title: "",
         image: "",
         content: "",
-        author: loggedUser,
+        newCatName: "",
+        catImage: "",
+        author: loggedUser.username,
     })
 
+
+    let cat = formData.category;
+
     const formSubmitHandler = (e) => {
+
         e.preventDefault();
+        console.log(formData);
+
+        if (formData.category=="New Category"){
+            
+            let newCat = {
+
+                name: formData.newCatName,
+                img: formData.catImage
+                
+            }
+
+            formData.category=formData.newCatName;
+            setCatList((prev) => [...prev, newCat]);
+
+        }
+
         onSavePostData(formData);
     }
 
@@ -33,19 +56,21 @@ function Post({loggedUser, onSavePostData}) {
                             <option value="Memes">Memes</option>
                             <option value="Recipes">Recipes</option>
                             <option value="Sports">Sports</option>
-                            <option value="other"> New Category</option>
+                            <option value="New Category"> New Category</option>
                         </select>
                     </div>
                     
+                     
                     <div className="col-6 col-md-4">
-                        <div className={`form-floating mb-3 ${classes.hidden} hidcat`}>
-                            <input type="text" name="newcategoryname" className={`form-control ${classes.formcontrol}`} id="floatingInput" placeholder="Title" autoComplete="off"/>
-                            <label htmlFor="floatingInput">Category name</label> 
-                        </div>
+                    <div className={cat === "New Category" ? `form-floating mb-3 hidcat` : `form-floating mb-3 hidcat ${classes.hidden}`}>
+                        <input type="text" name="newcategoryname" className={`form-control ${classes.formcontrol}`} id="floatingInput" placeholder="New Category" autoComplete="off" value={formData.newCatName} onChange={(e)=> setFormData(prev => ({...prev, newCatName: e.target.value}))} />
+                        <label htmlFor="floatingInput">Category name</label> 
                     </div>
+                </div>
+                    
                     <div className="col-6 col-md-4 text-center">
-                        <div className={`${classes.fileinput} ${classes.hidden}`}>
-                            <input type="file" name="newcategorypic" id="category-image" className={`${classes.file}`}/>
+                        <div className={cat === "New Category" ? `${classes.fileinput}` : `${classes.fileinput} ${classes.hidden}`}>
+                            <input type="file" name="newcategorypic" id="category-image" className={`${classes.file}`} onChange={(e)=> setFormData(prev => ({...prev, catImage: URL.createObjectURL(e.target.files[0])}))}/>
                             <label className={`${classes.lab}`} htmlFor="category-image">Category image</label>
                         </div>
                     </div>

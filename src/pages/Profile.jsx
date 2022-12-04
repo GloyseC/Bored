@@ -2,9 +2,12 @@ import React from "react";
 import classes from "./Profile.module.css";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { store } from "../redux-store/store";
 
 function Profile({ loggedUser, posts, postfilter}) {
-  let pic = loggedUser.profilePicture;
+  // let pic = loggedUser.profilePicture;
+
+  let pic = store.getState().profilePicture;
   return (
     <div>
       <Navbar loggedUser={loggedUser}></Navbar>
@@ -18,16 +21,16 @@ function Profile({ loggedUser, posts, postfilter}) {
             alt=""
           />
           <h3 className="mt-2">
-            {loggedUser.name}
+            {store.getState().name}
           </h3>{" "}
           <span className="mt-2 clearfix ">
             <small>
-              {loggedUser.username}
+              {store.getState().username}
             </small>
           </span>
           <span className=" clearfix ">
             <small>
-              {loggedUser.age}
+              {store.getState().age}
             </small>
           </span>
           <hr />
@@ -55,35 +58,35 @@ function Profile({ loggedUser, posts, postfilter}) {
               </span>
             </div>
             <div className="col-md-4">
-              <h5>Creator points</h5> <span className="num">2.5k</span>
+              <h5>Creator points</h5> <span className="num">{postfilter(posts).length}</span>
             </div>
           </div>
           <hr className="line" />{" "}
           <small className="mt-4">
             <b>bio: </b>
-            {loggedUser.bio}
+            {store.getState().bio}
           </small>
           <br />
         </div>
         <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
           integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </div>
     </div>

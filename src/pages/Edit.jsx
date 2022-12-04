@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Edit.module.css";
 import logo from "../assets/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Edit({loggedUser, onSaveEditData}) {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ function Edit({loggedUser, onSaveEditData}) {
         >
           <div className="col-lg-8 col-xl-6">
             <div className="card rounded-3">
-              <a href="/">
+              <Link to="/">
                 <img
                   src={logo}
                   className="w-100"
@@ -40,7 +41,7 @@ function Edit({loggedUser, onSaveEditData}) {
                   }}
                   alt="logo"
                 />
-              </a>
+              </Link>
 
               <hr style={{ width: "90%", margin: "auto", marginTop: "20px" }} />
               <div className="card-body p-4 p-md-5">
@@ -172,8 +173,8 @@ function Edit({loggedUser, onSaveEditData}) {
                           className="form-control"
                           type="file"
                           id="formFile"
-                          value={formData.image}
-                          onChange={(e)=> setFormData(prev => ({...prev, image: e.target.value}))}
+                          // value={formData.image}
+                          onChange={(e)=> setFormData(prev => ({...prev, image: URL.createObjectURL(e.target.files[0])}))}
                         />
                       </div>
                     </div>

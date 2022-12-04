@@ -3,6 +3,8 @@ import classes from "./Login.module.css";
 import login from "../assets/login.jpg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom/dist";
+// import store from "../redux-store/store";
+import {store, loginUser}  from "../redux-store/store"
 
 function validateEmail(){
 
@@ -44,7 +46,11 @@ function Login({ loggedUser, changeLoggedUser, userList }) {
     }
     if (u[0].password === password) {
       changeLoggedUser(u[0]);
+
+      store.dispatch(loginUser(u[0]));
       navigate("/");
+
+
     } else {
       alert("Incorrect password please try again");
     }
@@ -113,7 +119,7 @@ function Login({ loggedUser, changeLoggedUser, userList }) {
                 <Link to="#"> Forgot Password?</Link>
 
                 <p>
-                  Don't have an account? <a href="/register">Register here</a>
+                  Don't have an account? <Link to="/register">Register here</Link>
                 </p>
               </form>
             </div>

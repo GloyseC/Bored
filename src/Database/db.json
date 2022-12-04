@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "username": "rush0910",
+      "name": "rushendra",
+      "email": "rushendra910@gmail.com",
+      "age": 18,
+      "gender": "Female",
+      "password": "1",
+      "profilePicture": "rushendra.png",
+      "bio": "catssss",
+      "posts": []
+    }
+]

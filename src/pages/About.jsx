@@ -8,10 +8,10 @@ import nehul from "../assets/nehul";
 import yasin from "../assets/yasin.jpeg";
 import Navbar from "../components/Navbar";
 
-function About({ loggedUser }) {
+function About() {
   return (
     <div>
-      <Navbar loggedUser={loggedUser}></Navbar>
+      <Navbar></Navbar>
       <div className={`${classes.body}`}>
         <div className="bg-light">
           <div className={`${classes.container} py-5`}>

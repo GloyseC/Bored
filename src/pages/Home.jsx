@@ -6,44 +6,15 @@ import Welcome from "../components/Welcome";
 import Begin from "../components/Begin";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import book from "../assets/book.png";
-import movie from "../assets/movie.png";
-import meme from "../assets/meme.png";
-import recipe from "../assets/recipe.png";
-import sport from "../assets/sport.png";
+// import cats from "../Database/categories.json"
 
-const dummy_categories = [
-    {
-      id: "1",
-      name: "Books",
-      img: book,
-    },
-    {
-      id: "2",
-      name: "Movies",
-      img: movie,
-    },
-    {
-      id: "3",
-      name: "Memes",
-      img: meme,
-    },
-    {
-      id: "4",
-      name: "Recipes",
-      img: recipe,
-    },
-    {
-      id: "5",
-      name: "Sports",
-      img: sport,
-    }
-  ]
 
-const Home = ({loggedUser, posts}) => {
+// const categories = cats
+
+const Home = ({loggedUser, posts, catList, setCatList}) => {
     return (<div>
     <Navbar loggedUser={loggedUser}></Navbar>
-        <Card categories={dummy_categories} posts={posts}></Card>
+        <Card categories={catList} posts={posts} setCatList={setCatList}></Card>
         <Welcome></Welcome>
         <AboutUs></AboutUs>
         <RegisterHere></RegisterHere>
