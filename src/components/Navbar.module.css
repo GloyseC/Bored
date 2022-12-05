@@ -8,3 +8,15 @@
     margin-left: 20px;
     font-size: 20px;
   }
+
+  .navv{
+    font-size: 1.4rem;
+    letter-spacing:0.8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .navbar{
+    background-color:var(--nav-color);
+  }

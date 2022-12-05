@@ -3,6 +3,8 @@ import classes from "./Profile.module.css";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { store } from "../redux-store/store";
+import Switch from "../components/ToggleSwitch";
+
 
 function Profile({ loggedUser, posts, postfilter}) {
   // let pic = loggedUser.profilePicture;
@@ -12,6 +14,7 @@ function Profile({ loggedUser, posts, postfilter}) {
     <div>
       <Navbar loggedUser={loggedUser}></Navbar>
       <div className={`${classes.body}`}>
+      <Switch />
         <div className={`text-center ${classes.user}`}>
           {" "}
           <img

@@ -1,8 +1,8 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import classes from "./Feed.module.css";
-import { useLocation } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
+import Switch from "../components/ToggleSwitch";
 const Feed = ({ posts }) => {
 
     const location = useLocation()
@@ -15,6 +15,7 @@ const Feed = ({ posts }) => {
     return (
         <div className={`${classes.body}`}>
             <Navbar></Navbar>
+            <Switch />
             {posts
                 .filter((post) => post.category === cat.name)
                 .map((post) => (
@@ -37,15 +38,17 @@ const Feed = ({ posts }) => {
                                     <p style={{ marginTop: "20px" }}>{post.content}</p>
 
                                     <p>
-                                        <button
-                                            className="btn btn-primary"
-                                            name="postid"
-                                            value="<%= post.postImg %>"
-                                            type="submit"
-                                        >
-                                            {" "}
-                                            Read the full story{" "}
-                                        </button>
+                                        <Link to="/story" state={{post}}>
+                                            <button
+                                                className="btn btn-primary"
+                                                name="postid"
+                                                value="<%= post.postImg %>"
+                                                type="submit"
+                                            >
+                                                {" "}
+                                                Read the full story{" "}
+                                            </button>
+                                        </Link>
                                     </p>
                                 </div>
                             </div>

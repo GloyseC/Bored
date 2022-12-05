@@ -1,0 +1,12 @@
+.h_btn{
+    background-color: rgba(252, 177, 177);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+    border:none;
+    padding:2vh;
+    padding-left:12vh;
+    margin-top:2vh;
+    margin-left:-10vh;
+    border-radius:20px;
+    position:fixed;
+    z-index: 99;
+}

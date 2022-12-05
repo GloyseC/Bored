@@ -8,7 +8,10 @@
     .regi{
       padding: 5vw;
       text-align: center;
-      background-color: rgb(253, 224, 224);
+      background-color: rgba(252, 177, 177, 0.747);
+  
+      color: var(--text-color);
+  
     }
      
     

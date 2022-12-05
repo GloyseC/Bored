@@ -7,17 +7,22 @@ import sudha from "../assets/sudha.png";
 import nehul from "../assets/nehul";
 import yasin from "../assets/yasin.jpeg";
 import Navbar from "../components/Navbar";
+import Switch from "../components/ToggleSwitch";
 
 function About() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className={`${classes.body}`}>
-        <div className="bg-light">
+      <div className={` ${classes.abtbody}`}>
+      <Switch />
+        <div className="">
+        
           <div className={`${classes.container} py-5`}>
             <div className="row h-100 align-items-center py-5">
               <div className="col-lg-6">
-                <h1 className="display-4">About us</h1>
+              <h1 className="display-4" style={{
+                  color:"var(--text-color)  "
+                }}>About us</h1>
                 <br />
                 <p className="lead text-muted mb-0">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -27,17 +32,19 @@ function About() {
                 </p>
               </div>
               <div className="col-lg-6 d-none d-lg-block">
-                <img src={logo} alt="" className="img-fluid" />
+              <img src={logo} alt="" className="img-fluid bg-light" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-light py-5">
+        <div className=" py-5">
           <div className={`${classes.container} py-5`}>
             <div className="row mb-4">
               <div className="col-lg-5">
-                <h2 className="display-4 font-weight-light">Our team</h2>
+              <h2 className="display-4 font-weight-light" style={{
+                  color:"var(--text-color)  "
+                }}>Our team</h2>
                 {/* <!-- <p className="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. --> */}
               </div>
             </div>

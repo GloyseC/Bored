@@ -61,7 +61,7 @@
   }
 
   .transparent {
-    background-color: white;
+    background-color: var(--bg-color);
     border: none;
   }
 

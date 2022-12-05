@@ -1,10 +1,12 @@
-.body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    box-sizing: inherit;
-    margin: left 25%;
+.abtbody {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: inherit;
+  margin: left 25%;
+  background-color: var(--bg-color);
+
+
 }
-  
   .container {
     padding: 0 16px;
     margin: auto;

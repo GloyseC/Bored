@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Post.module.css";
 import Navbar from "../components/Navbar";
 import { Prev } from "react-bootstrap/esm/PageItem";
+import Switch from "../components/ToggleSwitch";
 
 function Post({loggedUser, onSavePostData, catList, setCatList}) {
     const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ function Post({loggedUser, onSavePostData, catList, setCatList}) {
         if (formData.category=="New Category"){
             
             let newCat = {
-
+                id: 5+(Math.random())*10000,
                 name: formData.newCatName,
                 img: formData.catImage
                 
@@ -42,7 +43,7 @@ function Post({loggedUser, onSavePostData, catList, setCatList}) {
     
   return (<div><Navbar loggedUser={loggedUser}></Navbar>
   <div className={`${classes.body}`}>
-
+<Switch />
 <div className={`${classes.container}`}>
 
         <div className={`${classes.containermd} container-md ${classes.containsform}`}>
