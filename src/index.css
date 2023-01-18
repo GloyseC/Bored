@@ -19,3 +19,21 @@ code {
   .good-email {
       border: 3px solid green;
   }
+
+
+
+  :root {
+    --bg-color: #fff;
+    /* changes in css were made her */
+    --text-color: #000;
+    --sec-color:rgb(253, 224, 224);
+    --nav-color: #fff;
+
+  }
+  .dark {
+    --bg-color: black;
+    --text-color:white;
+    --sec-color:#001253;
+    --nav-color: rgba(252, 177, 177);
+
+  }

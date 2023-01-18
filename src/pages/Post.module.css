@@ -1,5 +1,5 @@
 .body {
-    background-color: rgb(253, 224, 224);
+    background-color: var(--sec-color);
     background-size: 100% 100vw;
     height: 1000px;
 }
@@ -20,13 +20,13 @@
     font-size: 50px;
 
     text-align: center;
-} */
+} 
 
-/* .between-post-content {
+ .between-post-content {
     border-top: 1px solid rgb(238, 95, 95);
     margin: auto;
     width: 50%;
-    
+
 } */
 
 .containermd {
@@ -47,7 +47,7 @@
     height: 40px;
     border-radius: 25px;
     background: linear-gradient(40deg, #f76195, #ff8181);
-    /* background-image: url("/Images/very-light.jpg"); */
+     /* background-image: url("/Images/very-light.jpg");  */
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
@@ -57,18 +57,18 @@
     cursor: pointer;
     transition: transform .2s ease-out;
 
-    /* float: left; */
+     float: left; 
 }
 
-/* .form-select {
+ .form-select {
 
     width: 30%;
-} */
+} 
 
 .containsform {
 
-    background-color: rgb(253, 253, 253);
-    
+    background-color: var(--bg-color);
+
     border-radius: 10px;
 }
 
@@ -94,12 +94,11 @@
     background-color: rgb(252, 177, 177);
 }
 
-/* .col-6 {
+ .col-6 {
 
-    
-} */
+
+} 
 
 ::-webkit-scrollbar {
     width: 0px;
   }
-  

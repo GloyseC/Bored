@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Contact.module.css";
 import Navbar from "../components/Navbar";
-
+import Switch from "../components/ToggleSwitch";
 const Contact = ({ loggedUser }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -29,7 +29,8 @@ const Contact = ({ loggedUser }) => {
   return (
     <div>
       <Navbar loggedUser={loggedUser}></Navbar>
-      <div className={`${classes.body}`}>
+      <div className={`${classes.cntbody}`}>
+      <Switch />
         
         <div>
           <div

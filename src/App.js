@@ -14,6 +14,7 @@ import userl from "./Database/db.json"
 import Feed from "./pages/Feed";
 import postl from "./Database/postList.json"
 import catl from "./Database/categories.json"
+import Story from "./pages/Story"
 
 function App() {
   let navigate = useNavigate();
@@ -182,6 +183,13 @@ function App() {
           <Route
             path="feed"
             element={loggedUser && <Feed posts={postList} loggedUser={loggedUser}></Feed>}
+          ></Route>
+        )}
+
+        {(
+          <Route
+            path="story"
+            element={loggedUser && <Story posts={postList} loggedUser={loggedUser}></Story>}
           ></Route>
         )}
 

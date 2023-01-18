@@ -21,9 +21,9 @@ const Card = (props) => {
               name="category"
               value={category.name}
             >
-              <img src={"/" + category.img} alt="" />
+              <img src={category.id>5? category.img: "/" + category.img} alt="" />
             </button>
-            <h2 style={{color: "#212529"}}>{category.name}</h2>
+            <h2 style={{color: "var(--text-color)"}}>{category.name}</h2>
           </div>
         </form></Link>)
         )}

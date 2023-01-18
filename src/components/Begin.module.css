@@ -14,3 +14,10 @@
     background-color: rgba(252, 177, 177, 0.747);
     color: black;
   }
+
+  .abt{
+    padding: 5vw;
+    text-align: center;
+    color: var(--text-color);
+  
+  }

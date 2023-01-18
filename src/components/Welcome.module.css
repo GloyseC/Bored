@@ -1,9 +1,11 @@
 .desc {
+  color: var(--text-color);
     margin-top: 8vw;
     padding: 3vw;
     background-color: rgb(253, 224, 224);
   }
   .descr {
+
     float: right;
     width: 60%;
     margin-right: 5vw;

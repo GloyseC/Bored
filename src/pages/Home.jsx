@@ -7,19 +7,23 @@ import Begin from "../components/Begin";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 // import cats from "../Database/categories.json"
+import Switch from "../components/ToggleSwitch";
 
 
 // const categories = cats
 
-const Home = ({loggedUser, posts, catList, setCatList}) => {
+const Home = ({ loggedUser, posts, catList, setCatList }) => {
     return (<div>
-    <Navbar loggedUser={loggedUser}></Navbar>
-        <Card categories={catList} posts={posts} setCatList={setCatList}></Card>
-        <Welcome></Welcome>
-        <AboutUs></AboutUs>
-        <RegisterHere></RegisterHere>
-        <Begin></Begin>
-        <Footer></Footer>
+        <Navbar loggedUser={loggedUser}></Navbar>
+        <div style={{ backgroundColor: "var(--bg-color" }} >
+            <Switch />
+            <Card categories={catList} posts={posts} setCatList={setCatList}></Card>
+            <Welcome></Welcome>
+            <AboutUs></AboutUs>
+            <RegisterHere></RegisterHere>
+            <Begin></Begin>
+            <Footer></Footer>
+        </div>
     </div>);
 }
 
